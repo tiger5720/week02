@@ -1,27 +1,29 @@
 package lsp;
 
-class Pokemon {
-    public void attack(){
-        System.out.println("공격 실패!");
-    };
+interface Pokemon {
+    void attack();
 
 }
 
-class FirePokemon extends Pokemon{
+class FirePokemon implements Pokemon{
     @Override
     public void attack() {
         System.out.println("불 공격 성공~");
     }
 }
 
-class WaterPokemon extends Pokemon{
-    //미구현
-}
-
-class ElectricPokemon extends Pokemon{
+class WaterPokemon implements Pokemon{
     @Override
     public void attack() {
-        throw new UnsupportedOperationException("전기 공격이 아직 완성 되지 않습니다");
+        System.out.println("물 속성 공격!");
+    }
+}
+
+class ElectricPokemon implements Pokemon{
+    @Override
+    public void attack() {
+        //throw new UnsupportedOperationException("전기 공격이 아직 완성 되지 않습니다");
+        System.out.println("전기 속성 공격 성공~!");
     }
 }
 
