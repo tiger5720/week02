@@ -5,5 +5,6 @@ public class PokemonGame {
         Pikkachu pikkachu = new Pikkachu();
         pikkachu.defend();
         pikkachu.attack();
+
     }
 }
